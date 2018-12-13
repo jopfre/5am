@@ -1,9 +1,3 @@
-var map = L.map('map').setView([lat, lon], 14);
-var tiles = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
-    attribution: 'Positron',
-    maxZoom: 19
-}).addTo(map);
-
 var legend = [];
 var levels = [];
 
@@ -11,7 +5,6 @@ for (var i = 0; i < 115; i++) {
     levels.push(i);
 }
 console.log(levels);
-// var levels = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115];
 for (var i = 0; i < levels.length; i++) {
     var level = levels[i];
     legend.push({ val: level, color: ColorExt.Utils.toColor(level, levels[0], levels[levels.length - 1], 180, 240) });
@@ -26,9 +19,6 @@ var overlay = L.canvasOverlay(drawFunction, {
     legend: legend
 }).addTo(map);
 function drawFunction(overlay, settings) {
-
-    console.log(settings);
-    // overlay;
     var map = this._map;
     var opt = settings.options;
     var row = opt.data.length, col = opt.data[0].length, size = settings.size, legend = opt.legend;

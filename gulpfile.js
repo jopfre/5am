@@ -68,7 +68,7 @@ gulp.task('scripts', function(){
     .pipe(plumber(errorHandler))
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
-    .pipe(concat('main.js'))
+    // .pipe(concat('main.js'))
     .pipe(gulp.dest('./js'))
     // .pipe(rename({suffix: '.min'}))
     // .pipe(uglify())

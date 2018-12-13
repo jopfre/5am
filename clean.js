@@ -24,23 +24,34 @@ var deltaLon = cellSize/(111111*Math.cos(lat*Math.PI/180));
 
  
 var data = lines.slice(7);
-	
+
+		
 if(!Boolean(data[data.length]-1)) { //last element is null
 	data.pop();
 }
 
-var dataArray = data.map(function(line) {
+data = data.map(function(line) {
 	if(line.length) {
 		return line.split(' ');
 	};
 });
 
-dataArray.reverse();
+
+data = data.map(function(line) {
+	// console.log(line);
+	return line.map(function(point) {
+		return parseInt(point);
+	});
+});
+	
+console.log(data);
+
+data.reverse();
 
 var output = '';
 output += 'var lat = '+lat+';\n';
 output += 'var lon = '+lon+';\n';
 output += 'var deltaLat = '+deltaLat+';\n';
 output += 'var deltaLon = '+deltaLon+';\n';
-output += 'var data = '+JSON.stringify(dataArray) +';'
-fs.writeFileSync('data.js', output, 'utf8');
+output += 'var data = '+JSON.stringify(data) +';'
+fs.writeFileSync('js/data.js', output, 'utf8');
