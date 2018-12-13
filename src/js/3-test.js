@@ -1,6 +1,6 @@
 var map = L.map('map').setView([lat, lon], 14);
-var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+var tiles = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
+    attribution: 'Positron',
     maxZoom: 19
 }).addTo(map);
 
