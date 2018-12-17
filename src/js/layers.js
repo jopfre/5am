@@ -26,7 +26,9 @@ L.GridLayer.Lidar = L.GridLayer.extend({
     var lat = coords.x;
     var lon = Math.abs(coords.y) - 1; //adjust for top left v bottom left discrepancy between leaflet and os
 
-    var url = "http://localhost:3002/lidar?lat="+lat+"&lon="+lon;
+    var domain = 'http://138.68.84.71:3002/';
+    // var domain = 'http://localhost:3002/';
+    var url = domain+"lidar?lat="+lat+"&lon="+lon;
     fetch(url)
       .then(function(res) {
         return res.json();

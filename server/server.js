@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 
 const app = express();
-const port = 3002;
+const port = 8080;
 
 mongoClient.connect((err) => {
 	const routes = require('./routes.js');
