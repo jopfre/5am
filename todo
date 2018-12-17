@@ -1,2 +1,6 @@
-add second square
-sort lidar display
+Investiage why data takes so slow to come back from db or server
+
+Contrast streching 
+	Need to count points when preping data to build histogram
+	https://stackoverflow.com/questions/12114643/how-can-i-perform-in-browser-contrast-stretching-normalization
+Research zone of theoretical visibility

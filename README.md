@@ -1,18 +1,24 @@
 # 5am
 Data source:
-gov.uk lidar data [https://environment.data.gov.uk/ds/survey/index.jsp#/survey?grid=ST57]
+gov.uk Lidar Data https://environment.data.gov.uk/ds/survey/index.jsp#/survey?grid=ST57
 
-Mapping
-[https://gist.github.com/Sumbera/11114288]
+Mapping based on
+https://github.com/rob-murray/os-leaflet
+
+API based on
+https://github.com/aurelkurtula/express-api
 
 ## Demo
-[https://jopf.re/5am]
+https://jopf.re/5am
 
-	
-## Development
+## Install
 `npm install`
 
+### Client build
 `gulp`
 
-### Clean data
-`node clean.js`
+### Prep and insert data
+`npm insert`
+
+### Start server
+`npm start`

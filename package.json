@@ -1,16 +1,21 @@
 {
-  "name": "htmlStarter",
+  "name": "5am",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
+    "start": "nodemon ./server/server.js",
+    "insert": "node insert.js",
+
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "jopfre",
   "license": "",
   "devDependencies": {
+    "autoprefixer": "latest",
     "browser-sync": "latest",
-    "gulp": "latest",
+    "cssnano": "latest",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "latest",
     "gulp-concat": "latest",
     "gulp-jshint": "latest",
@@ -22,8 +27,11 @@
     "gulp-sourcemaps": "^2.4.1",
     "gulp-uglify": "latest",
     "gulp-wait": "0.0.2",
-    "cssnano": "latest",
     "jshint": "latest",
-    "autoprefixer": "latest"
+    "nodemon": "^1.18.9"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongodb": "^3.1.10"
   }
 }
