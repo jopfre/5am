@@ -1,5 +1,7 @@
 # 5am
-Data source:
+An eventual sunrise/sunset viewpoint locator.
+
+Data source
 gov.uk Lidar Data https://environment.data.gov.uk/ds/survey/index.jsp#/survey?grid=ST57
 
 Mapping based on
@@ -9,7 +11,7 @@ API based on
 https://github.com/aurelkurtula/express-api
 
 ## Demo
-https://jopf.re/5am
+https://5amc.cf
 
 ## Install
 `npm install`
@@ -18,7 +20,7 @@ https://jopf.re/5am
 `gulp`
 
 ### Prep and insert data
-`npm insert`
+`npm run insert`
 
-### Start server
+### Start dev server
 `npm start`

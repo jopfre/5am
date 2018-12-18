@@ -1,6 +1,3 @@
-// require('dotenv').config();
-// console.log(process.env.NODE_ENV);
-
 process.title = '5am';
 
 const express = require('express');

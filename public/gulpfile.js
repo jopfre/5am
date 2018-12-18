@@ -27,11 +27,11 @@ var path = require('path');
 //wordpress
 // var dirName = path.dirname(__dirname).split(path.sep)[3];
 //static
-var dirName = path.basename(__dirname);
+// var dirName = path.basename(__dirname);
 
 gulp.task('browser-sync', function() {
   browserSync.init({
-    proxy: 'localhost/5am/'+dirName
+    proxy: 'http://localhost:8080'
   });
 });
 
@@ -54,9 +54,9 @@ gulp.task('styles', function(){
       includePaths: ['./src/sass']
     }).on('error', sass.logError))
     .pipe(postcss([ autoprefixer({ browsers: [">1%"] }) ]))
-    .pipe(gulp.dest('./'))
+    // .pipe(gulp.dest('./'))
     // .pipe(rename({suffix: '.min'}))
-    // .pipe(postcss([ cssnano() ]))
+    .pipe(postcss([ cssnano() ]))
     // .pipe(pixrem({ rootValue: '16px', html: false }))
     // .pipe(sourcemaps.write())
     .pipe(gulp.dest('./'))
@@ -69,9 +69,9 @@ gulp.task('scripts', function(){
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
     // .pipe(concat('main.js'))
+    .pipe(uglify())
     .pipe(gulp.dest('./js'))
     // .pipe(rename({suffix: '.min'}))
-    // .pipe(uglify())
     // .pipe(gulp.dest('./'))
     .pipe(browserSync.stream())
 }); 
