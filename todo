@@ -4,6 +4,8 @@ switch db from atlast to digiocean as provides more memory and less network tran
 
 add sun rise position
 
+retry fetch if failed
+
 Research zone of theoretical visibility
 
 Investiage why data takes so slow to come back from db or server
