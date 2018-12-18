@@ -27,9 +27,11 @@ L.GridLayer.Lidar = L.GridLayer.extend({
     var lat = coords.x;
     var lon = Math.abs(coords.y) - 1; //adjust for top left v bottom left discrepancy between leaflet and os
 
-    // var domain = 'http://138.68.84.71:8080/';
-    var domain = 'http://localhost:8080/';
-    var url = domain+"lidar?lat="+lat+"&lon="+lon;
+    // var domain = 'http://138.68.84.71:8080/'; //prod
+    console.log(window.location.hostname);
+    // var domain = 'http://localhost:8080/'; //dev
+    // var url = domain+"lidar?lat="+lat+"&lon="+lon;
+    var url = window.location.protocol+"//"+window.location.hostname+":8080/lidar?lat="+lat+"&lon="+lon;
 
     var t0 = performance.now();
 
