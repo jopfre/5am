@@ -23,9 +23,10 @@ mongoClient.connect((err) => {
 	  next();
 	});
 
+	app.use(express.static('public'));
 	app.use('/', routes);
 
-	app.listen(port, () => {
+	app.listen(port, 'localhost', () => {
 		console.log(`Listening on ${port}`);
 	});
 });
