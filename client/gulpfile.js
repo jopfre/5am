@@ -31,7 +31,7 @@ var dirName = path.basename(__dirname);
 
 gulp.task('browser-sync', function() {
   browserSync.init({
-    proxy: 'localhost/'+dirName
+    proxy: 'localhost/5am/'+dirName
   });
 });
 
