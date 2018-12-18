@@ -16,7 +16,7 @@ var map = new L.Map('map', {
 
 // Leaflet.TileLayer.OSOpenSpace with API Key
 var openspaceLayer = L.OSOpenSpace.tilelayer('EC9EDE7DAD732ABAE0430C6CA40AB812');
-// openspaceLayer = L.OSOpenSpace.tilelayer('7B57B508BCAC0D53E0530C6CA40AC62F'); //https://jopf.re/5am
+// var openspaceLayer = L.OSOpenSpace.tilelayer('7B57B508BCAC0D53E0530C6CA40AC62F'); //https://jopf.re/5am
 map.addLayer(openspaceLayer);
 
 // Add scale

@@ -17,6 +17,7 @@ map.addLayer( L.gridLayer.debugCoords({tileSize: 250}) );
 //Lidar
 L.GridLayer.Lidar = L.GridLayer.extend({
   createTile: function (coords, done) {
+    console.log('creating layer');
     var tile = document.createElement('canvas');
     var tileSize = this.getTileSize();
     tile.setAttribute('width', tileSize.x);
@@ -26,8 +27,8 @@ L.GridLayer.Lidar = L.GridLayer.extend({
     var lat = coords.x;
     var lon = Math.abs(coords.y) - 1; //adjust for top left v bottom left discrepancy between leaflet and os
 
-    var domain = 'http://138.68.84.71:8080/';
-    // var domain = 'http://localhost:8080/';
+    // var domain = 'http://138.68.84.71:8080/';
+    var domain = 'http://localhost:8080/';
     var url = domain+"lidar?lat="+lat+"&lon="+lon;
 
     var t0 = performance.now();

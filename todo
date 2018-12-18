@@ -1,3 +1,7 @@
+Add unit tests
+
+Research zone of theoretical visibility
+
 Investiage why data takes so slow to come back from db or server
 	Set up time in server and client
 	Time atlas a digital ocean
@@ -11,4 +15,3 @@ imporve insert averagedata func
 Contrast streching 
 	Need to count points when preping data to build histogram
 	https://stackoverflow.com/questions/12114643/how-can-i-perform-in-browser-contrast-stretching-normalization
-Research zone of theoretical visibility
