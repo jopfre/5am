@@ -26,14 +26,20 @@ L.GridLayer.Lidar = L.GridLayer.extend({
     var lat = coords.x;
     var lon = Math.abs(coords.y) - 1; //adjust for top left v bottom left discrepancy between leaflet and os
 
-    var domain = 'http://138.68.84.71:3002/';
-    // var domain = 'http://localhost:3002/';
+    // var domain = 'http://138.68.84.71:8080/';
+    var domain = 'http://localhost:8080/';
     var url = domain+"lidar?lat="+lat+"&lon="+lon;
+
+    var t0 = performance.now();
+
     fetch(url)
       .then(function(res) {
         return res.json();
       })
       .then(function(res) {
+        var t1 = performance.now();
+        console.log("Fetch "+lat+lon+"took " + (t1 - t0) + " milliseconds.");
+
         let data = res.data;
         // consider using image data for performance https://stackoverflow.com/questions/7812514/drawing-a-dot-on-html5-canvas
         for(var y = 0; y < data.length; y++) {

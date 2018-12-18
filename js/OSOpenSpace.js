@@ -76,7 +76,6 @@
 
       L.TileLayer.WMS.prototype.initialize.call(this,
         'https://openspace.ordnancesurvey.co.uk/osmapapi/ts', 
-        // 'http://openspace.ordnancesurvey.co.uk/osmapapi/ts', 
         options);
 
       this.wmsParams = {

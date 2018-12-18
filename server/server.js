@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const mongoClient = require('./mongo-client');
 const bodyParser = require('body-parser');
@@ -5,6 +7,8 @@ const fs = require('fs');
 
 const app = express();
 const port = 8080;
+
+// console.log(process.env.NODE_ENV);
 
 mongoClient.connect((err) => {
 	const routes = require('./routes.js');

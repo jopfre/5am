@@ -1,6 +1,12 @@
+Investiage why data takes so slow to come back from db or server
+	Set up time in server and client
+	Time atlas a digital ocean
+
 Add dev production env vars
 
-Investiage why data takes so slow to come back from db or server
+Set up ssl https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04
+
+imporve insert averagedata func
 
 Contrast streching 
 	Need to count points when preping data to build histogram

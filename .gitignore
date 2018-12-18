@@ -2,4 +2,4 @@
 package-lock.json
 /lidar
 /leaflet
-creds.json
+.env
