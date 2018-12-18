@@ -27,11 +27,11 @@ var path = require('path');
 //wordpress
 // var dirName = path.dirname(__dirname).split(path.sep)[3];
 //static
-var dirName = path.basename(__dirname);
+// var dirName = path.basename(__dirname);
 
 gulp.task('browser-sync', function() {
   browserSync.init({
-    proxy: 'localhost/5am/'+dirName
+    proxy: 'http://localhost:8080'
   });
 });
 
