@@ -1,6 +1,11 @@
 Add unit tests
 
-switch db from atlast to digiocean as provides more memory and less network transfer time
+for db reqs? or some other way to force gzip
+https://expressjs.com/en/advanced/best-practice-performance.html#use-gzip-compression
+
+cache openspace tiles
+
+switch db from atlast to digiocean as provides more memory and less network transfer time?
 
 add sun rise position
 
@@ -11,8 +16,6 @@ Research zone of theoretical visibility
 Investiage why data takes so slow to come back from db or server
 	Set up time in server and client
 	Time atlas a digital ocean
-
-Add dev production env vars
 
 imporve insert averagedata func
 
