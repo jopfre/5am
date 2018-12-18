@@ -29,7 +29,7 @@ L.GridLayer.Lidar = L.GridLayer.extend({
 
     var t0 = performance.now();
 
-    var url = "http://localhost:8080/lidar?lat="+lat+"&lon="+lon;
+    var url = "/lidar?lat="+lat+"&lon="+lon;
     
     fetch(url)
       .then(function(res) {
