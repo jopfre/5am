@@ -5,8 +5,10 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "nodemon ./server/server.js",
+    "stop": "pkill --signal SIGINT 5am",
+    "status": "ps -e|grep node",
     "insert": "node insert.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "jopfre",
   "license": "",
@@ -26,6 +28,7 @@
     "gulp-sourcemaps": "^2.4.1",
     "gulp-uglify": "latest",
     "gulp-wait": "0.0.2",
+    "jest": "^23.6.0",
     "jshint": "latest",
     "nodemon": "^1.18.9"
   },

@@ -1,4 +1,7 @@
-require('dotenv').config();
+// require('dotenv').config();
+// console.log(process.env.NODE_ENV);
+
+process.title = '5am';
 
 const express = require('express');
 const mongoClient = require('./mongo-client');
@@ -7,8 +10,6 @@ const fs = require('fs');
 
 const app = express();
 const port = 8080;
-
-// console.log(process.env.NODE_ENV);
 
 mongoClient.connect((err) => {
 	const routes = require('./routes.js');
@@ -25,6 +26,6 @@ mongoClient.connect((err) => {
 	app.use('/', routes);
 
 	app.listen(port, () => {
-		console.log(`Listening on http://localhost:${port}`);
+		console.log(`Listening on ${port}`);
 	});
 });
