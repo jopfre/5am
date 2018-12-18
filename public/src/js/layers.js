@@ -15,7 +15,6 @@ L.gridLayer.debugCoords = function(opts) {
 map.addLayer( L.gridLayer.debugCoords({tileSize: 250}) );
 
 //Lidar
-
 L.GridLayer.Lidar = L.GridLayer.extend({
   createTile: function (coords, done) {
     var tile = document.createElement('canvas');
@@ -39,7 +38,7 @@ L.GridLayer.Lidar = L.GridLayer.extend({
         var t1 = performance.now();
         console.log("Fetch "+lat+lon+" took " + (t1 - t0)/1000 + " seconds.");
 
-        let data = res.data;
+        var data = res.data;
         // consider using image data for performance https://stackoverflow.com/questions/7812514/drawing-a-dot-on-html5-canvas
         for(var y = 0; y < data.length; y++) {
           var row = data[y];

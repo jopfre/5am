@@ -3,7 +3,7 @@ proj4.defs('EPSG27700', '+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=40
 
 // OS coordinates to Lat Long
 function os2ll(x, y) {
-	var latLon = proj4('EPSG27700','WGS84',[x, y-1000]) //-1000 because leaflet uses top left corner but os uses bottom left;
+	var latLon = proj4('EPSG27700','WGS84',[x, y-1000]); //-1000 because leaflet uses top left corner but os uses bottom left;
 	return latLon.reverse();
 }
 
