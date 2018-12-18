@@ -4,7 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "nodemon ./server/server.js",
+    "start": "nodemon ./server.js",
     "stop": "pkill --signal SIGINT 5am",
     "status": "ps -e|grep node",
     "insert": "node insert.js",

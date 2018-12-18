@@ -14,8 +14,6 @@ Investiage why data takes so slow to come back from db or server
 
 Add dev production env vars
 
-Set up ssl https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04
-
 imporve insert averagedata func
 
 Contrast streching 

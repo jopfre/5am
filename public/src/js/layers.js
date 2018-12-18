@@ -15,11 +15,9 @@ L.gridLayer.debugCoords = function(opts) {
 map.addLayer( L.gridLayer.debugCoords({tileSize: 250}) );
 
 //Lidar
-var url = window.location.protocol+"//"+window.location.hostname+":8080/lidar?lat="+lat+"&lon="+lon;
 
 L.GridLayer.Lidar = L.GridLayer.extend({
   createTile: function (coords, done) {
-    console.log('creating layer');
     var tile = document.createElement('canvas');
     var tileSize = this.getTileSize();
     tile.setAttribute('width', tileSize.x);
@@ -31,6 +29,8 @@ L.GridLayer.Lidar = L.GridLayer.extend({
 
     var t0 = performance.now();
 
+    var url = "http://localhost:8080/lidar?lat="+lat+"&lon="+lon;
+    
     fetch(url)
       .then(function(res) {
         return res.json();
