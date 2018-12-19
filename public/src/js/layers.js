@@ -26,7 +26,8 @@ L.GridLayer.Lidar = L.GridLayer.extend({
     var lon = Math.abs(coords.y) - 1; //adjust for top left v bottom left discrepancy between leaflet and os
 
     var url = "/lidar?lat="+lat+"&lon="+lon;
-    
+    var maxHeight = 120; //harcoded for now
+
     fetch(url)
       .then(function(res) {
         return res.json();
@@ -41,7 +42,8 @@ L.GridLayer.Lidar = L.GridLayer.extend({
             if(row[x]<0) {
               row[x] = 0;
             }
-            ctx.fillStyle = "rgba(0,0,0,"+row[x]/100+")";
+            var scaledHeight = row[x]/maxHeight;
+            ctx.fillStyle = "rgba(0,0,0,"+scaledHeight+")";
             ctx.fillRect(x,y,1,1);
           }
         }
