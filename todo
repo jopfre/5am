@@ -1,5 +1,17 @@
 Add unit tests
 
+
+colors ff8000 0083FF
+
+mongo log for speed
+
+alt tile service for os maps?
+e.g.
+https://www.mapbox.com/pricing/
+https://waymaps.the-hug.net/, maybe there is a free one
+https://gist.github.com/jirik/8380a15071ba4d9fb74ee291b6127bbd
+
+
 for db reqs? or some other way to force gzip
 https://expressjs.com/en/advanced/best-practice-performance.html#use-gzip-compression
 
