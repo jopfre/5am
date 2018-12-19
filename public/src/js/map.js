@@ -9,9 +9,8 @@ function os2ll(x, y) {
 
 // Init Leaflet.Map
 var map = new L.Map('map', {
-  maxZoom: 2,
   crs: L.OSOpenSpace.CRS, //OS coordinate system
-  attributionControl: false
+  attributionControl: false,
 });
 
 // Leaflet.TileLayer.OSOpenSpace with API Key
@@ -22,4 +21,4 @@ map.addLayer(openspaceLayer);
 L.control.scale({ position: 'bottomright' }).addTo(map);
 
 // Set starting view and zoom
-map.setView(os2ll(357500,179000), 0);
+map.setView(os2ll(358000,174000), 0);

@@ -59,4 +59,9 @@ L.gridLayer.lidar = function(opts) {
   return new L.GridLayer.Lidar(opts);
 };
 
-map.addLayer( L.gridLayer.lidar({tileSize: 250}) );
+map.addLayer( L.gridLayer.lidar({
+  tileSize: 250,
+  maxZoom: 4,
+  maxNativeZoom: 2,
+  // minZoom: -1
+}) );

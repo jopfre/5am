@@ -2,10 +2,15 @@
 An eventual sunrise/sunset viewpoint locator.
 
 Data source
-gov.uk Lidar Data https://environment.data.gov.uk/ds/survey/index.jsp#/survey?grid=ST57
+gov.uk Lidar Data 
+https://environment.data.gov.uk/DefraDataDownload/?Mode=survey
+https://environment.data.gov.uk/ds/survey/index.jsp#/survey?grid=ST57
 
-Mapping based on
+Ordnace Survey Mapping
 https://github.com/rob-murray/os-leaflet
+
+Sun Calculations
+https://github.com/mourner/suncalc
 
 API based on
 https://github.com/aurelkurtula/express-api

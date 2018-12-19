@@ -24,8 +24,8 @@ var readFiles = function(dir, filelist) {
 var files = readFiles('./assets/lidar/');
 
 // For testing single files
-var single = [files[4]];
-files = single;
+// var single = [files[0]];
+// files = single;
 
 mongoClient.connect(err => {
   let db = mongoClient.getDb();
@@ -72,12 +72,12 @@ mongoClient.connect(err => {
     console.log('Inserting '+doc._id);
 
     // Write to file for testing
-    fs.writeFileSync('public/js/data.js', JSON.stringify(doc), 'utf8');
+    // fs.writeFileSync('public/js/data.js', JSON.stringify(doc), 'utf8');
     
     // Insert to db  
-    // lidar.insertOne(doc, function() {
-      // console.log(doc._id+' Inserted');
-    // }); 
+    lidar.insertOne(doc, function() {
+      console.log(doc._id+' Inserted');
+    }); 
   
   });
 
