@@ -11,6 +11,9 @@ function os2ll(x, y) {
 var map = new L.Map('map', {
   crs: L.OSOpenSpace.CRS, //OS coordinate system
   attributionControl: true,
+  maxZoom: 2,
+  minZoom: 0,
+  // minNativeZoom: 0,
 });
 
 // Leaflet.TileLayer.OSOpenSpace with API Key
@@ -22,3 +25,10 @@ L.control.scale({ position: 'bottomright' }).addTo(map);
 
 // Set starting view and zoom
 map.setView(os2ll(358000,174000), 0);
+
+// var zoomOutBtn = document.querySelector('.leaflet-control-zoom-out');
+// zoomOutBtn.classList.remove('leaflet-disabled');
+// zoomOutBtn.addEventListener('click', function() {
+// 	// map._container.classList.add('zoom-neg-1');
+// 	document.body.classList.add('zoom-neg-1');
+// });
