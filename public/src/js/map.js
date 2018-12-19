@@ -10,7 +10,7 @@ function os2ll(x, y) {
 // Init Leaflet.Map
 var map = new L.Map('map', {
   crs: L.OSOpenSpace.CRS, //OS coordinate system
-  attributionControl: false,
+  attributionControl: true,
 });
 
 // Leaflet.TileLayer.OSOpenSpace with API Key

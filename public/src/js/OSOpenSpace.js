@@ -70,8 +70,10 @@
 
       options = L.extend({
         crs: L.OSOpenSpace.CRS,
-        // tileSize: 200
         tileSize: 250,
+        minNativeZoom: 0,
+        maxNativeZoom: 0,
+        maxZoom: 2
       }, options);
 
       L.TileLayer.WMS.prototype.initialize.call(this,

@@ -15,11 +15,13 @@
    crossorigin=""></script>
 
   <script>
-  var map = L.map('mapid').setView([51.505, -0.09], 13);
+  var map = L.map('mapid').setView([51.505, -0.09], 0);
 	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-		  minNativeZoom: 13,
-		  maxNativeZoom: 13,
+		  minNativeZoom: 0,
+		  maxNativeZoom: 0,
+		  maxZoom: 0,
+		  minZoom: -2
 	}).addTo(map);
 	</script>
 </body>

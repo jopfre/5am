@@ -1,35 +1,28 @@
-Add unit tests
-
-colors ff8000 0083FF
-
-mongo log for speed
-
-alt tile service for os maps?
-e.g.
-https://www.mapbox.com/pricing/
-https://waymaps.the-hug.net/, maybe there is a free one
-https://gist.github.com/jirik/8380a15071ba4d9fb74ee291b6127bbd
+Features
+	add sun rise position
+	add minnative zoom to allow map to zoom by scaling tiles
+		investiage possible bug in os-layers
+	Research zone of theoretical visibility
 
 
-for db reqs? or some other way to force gzip
-https://expressjs.com/en/advanced/best-practice-performance.html#use-gzip-compression
+Tests:	
+	Add unit tests
 
-cache openspace tiles
-
+Db:
+ Mongo log for speed - not available on Atlas
 switch db from atlast to digiocean as provides more memory and less network transfer time?
 
-add sun rise position
+Tiles:
+alt tile service for os maps?
+	e.g.
+	https://www.mapbox.com/pricing/
+	https://waymaps.the-hug.net/, maybe there is a free one
+	https://gist.github.com/jirik/8380a15071ba4d9fb74ee291b6127bbd
+Cache openspace tiles?
 
-retry fetch if failed
+Clean
+	imporve insert averagedata func
 
-Research zone of theoretical visibility
-
-Investiage why data takes so slow to come back from db or server
-	Set up time in server and client
-	Time atlas a digital ocean
-
-imporve insert averagedata func
-
-Contrast streching 
-	Need to count points when preping data to build histogram
-	https://stackoverflow.com/questions/12114643/how-can-i-perform-in-browser-contrast-stretching-normalization
+Optimize
+	compression for db reqs? or some other way to force gzip
+	https://expressjs.com/en/advanced/best-practice-performance.html#use-gzip-compression
