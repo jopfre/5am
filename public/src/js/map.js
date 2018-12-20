@@ -11,9 +11,8 @@ function os2ll(x, y) {
 var map = new L.Map('map', {
   crs: L.OSOpenSpace.CRS, //OS coordinate system
   attributionControl: true,
-  maxZoom: 2,
+  maxZoom: 3,
   minZoom: 0,
-  // minNativeZoom: 0,
 });
 
 // Leaflet.TileLayer.OSOpenSpace with API Key
@@ -24,7 +23,7 @@ map.addLayer(openspaceLayer);
 L.control.scale({ position: 'bottomright' }).addTo(map);
 
 // Set starting view and zoom
-map.setView(os2ll(358000,174000), 0);
+map.setView(os2ll(358000,174000), 1);
 
 // var zoomOutBtn = document.querySelector('.leaflet-control-zoom-out');
 // zoomOutBtn.classList.remove('leaflet-disabled');
