@@ -10,6 +10,9 @@
     "insert": "node insert.js",
     "test": "jest"
   },
+  "nodemonConfig": {
+    "ignore": ["public/**/*.json", "public/**/*.js"]
+  },
   "author": "jopfre",
   "license": "",
   "devDependencies": {

@@ -1,0 +1,1 @@
+var lat=bristolLatLon[0],lon=bristolLatLon[1],times=SunCalc.getTimes(new Date,lat,lon),sunriseStr=times.sunrise.getHours()+":"+times.sunrise.getMinutes(),sunrisePos=SunCalc.getPosition(times.sunrise,lat,lon);console.log(times),console.log(sunriseStr),console.log(sunrisePos),document.getElementById("sunrise-time").textContent=sunriseStr;

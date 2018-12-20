@@ -1,4 +1,28 @@
 // @import 'normalize';
 @import 'vars';
+
+$mapElBorder: 2px solid rgba(0,0,0,0.2);
+$mapElBorderRadius: 4px;
+$mapElMargin: 10px;
+
+$mapElFont: bold 18px 'Lucida Console', Monaco, monospace;
+
 @import 'base';
 @import 'leaflet';
+
+#info {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 500;
+	background-color: #fff;
+	border: $mapElBorder;
+	border-radius: $mapElBorderRadius;
+	margin-top: $mapElMargin;
+	margin-right: $mapElMargin;
+	font: $mapElFont;
+	padding: 	5px 5px 2px;
+	span {
+		line-height: 1;
+	}
+}
