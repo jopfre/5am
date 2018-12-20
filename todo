@@ -1,7 +1,5 @@
 Features
 	add sun rise position
-	add minnative zoom to allow map to zoom by scaling tiles
-		investiage possible bug in os-layers
 	Research zone of theoretical visibility
 
 
@@ -10,7 +8,7 @@ Tests:
 
 Db:
  Mongo log for speed - not available on Atlas
-switch db from atlast to digiocean as provides more memory and less network transfer time?
+switch db from atlas to digiocean as provides more memory and less network transfer time?
 
 Tiles:
 alt tile service for os maps?
@@ -21,7 +19,7 @@ alt tile service for os maps?
 Cache openspace tiles?
 
 Clean
-	imporve insert averagedata func
+	imporve insert averagedata func with map/reduce - perhaps one function is possible
 
 Optimize
 	compression for db reqs? or some other way to force gzip
