@@ -5,7 +5,7 @@ if(typeof(L) !== 'undefined') {
 
  L.CanvasLayer = L.GridLayer.extend({
 
-  includes: [L.Mixin.Events, L.Mixin.TileLoader],
+  includes: [L.Evented, L.Mixin.TileLoader],
 
   options: {
       // minZoom: 0,
@@ -120,7 +120,11 @@ if(typeof(L) !== 'undefined') {
 
       var bg = back;
       var transform = L.DomUtil.TRANSFORM;
-      bg.style[transform] =  L.DomUtil.getTranslateString(origin) + ' scale(' + e.scale + ') ';
+      // bg.style[transform] =  L.DomUtil.getTranslateString(origin) + ' scale(' + e.scale + ') ';
+      L.DomUtil.setTransform(bg, origin, e.scale);
+
+
+
     },
 
     _endZoomAnim: function () {
