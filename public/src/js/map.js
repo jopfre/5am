@@ -27,9 +27,4 @@ L.control.scale({ position: 'bottomright' }).addTo(map);
 // Set starting view and zoom
 map.setView(bristolLatLon, 1);
 
-// var zoomOutBtn = document.querySelector('.leaflet-control-zoom-out');
-// zoomOutBtn.classList.remove('leaflet-disabled');
-// zoomOutBtn.addEventListener('click', function() {
-// 	// map._container.classList.add('zoom-neg-1');
-// 	document.body.classList.add('zoom-neg-1');
-// });
+var MAP_CENTER = map.getCenter();

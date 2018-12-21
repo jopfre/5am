@@ -9,6 +9,9 @@ https://environment.data.gov.uk/ds/survey/index.jsp#/survey?grid=ST57
 Ordnace Survey Mapping
 https://github.com/rob-murray/os-leaflet
 
+Full Screen Canvas Layer
+https://github.com/CartoDB/Leaflet.CanvasLayer/tree/8e78371306fd19decee51671a78bf8c54979ccbd
+
 Sun Calculations
 https://github.com/mourner/suncalc
 

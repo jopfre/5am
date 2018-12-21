@@ -16,24 +16,28 @@
   <meta name="theme-color" content="#00467f">
 </head>
 <body>
-  <table id="times">
-    <tr>
-      <td class="icon"><img src="img/sunrise.svg" alt="Sunrise time"></td>
-      <td id="sunrise-time"></td>
-    </tr>
-    <tr>
-      <td class="icon"><img src="img/sunset.svg" alt="Sunset time"></td>
-      <td id="sunset-time"></td>
-    </tr>
-  </table>
+  <aside id="info">
+    <table id="times">
+      <tr>
+        <td class="icon"><img src="img/sunrise.svg" alt="Sunrise time"></td>
+        <td id="sunrise-time"></td>
+      </tr>
+      <tr>
+        <td class="icon"><img src="img/sunset.svg" alt="Sunset time"></td>
+        <td id="sunset-time"></td>
+      </tr>
+    </table>
+  </aside>
   <div id="map"></div>
   <script src="js/leaflet.js"></script>
   <script src="js/proj4-compressed.js"></script>
   <script src="js/proj4leaflet.js"></script>
   <script src="js/OSOpenSpace.js"></script>
   <script src="js/map.js"></script>
+  <script src="js/leaflet_canvas_layer.js"></script>
   <script src="js/layers.js"></script>
   <script src="js/suncalc.js"></script>
   <script src="js/sun.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

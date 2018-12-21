@@ -10,7 +10,7 @@ $mapElFont: bold 14px 'Lucida Console', Monaco, monospace;
 @import 'base';
 @import 'leaflet';
 
-#times {
+#info {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -21,9 +21,11 @@ $mapElFont: bold 14px 'Lucida Console', Monaco, monospace;
 	margin-top: $mapElMargin;
 	margin-right: $mapElMargin;
 	font: $mapElFont;
+}
+#times {
   border-collapse: collapse;
 	td {
-		padding: 6px;
+		padding: 5px 5px 3px;
 	}
 	.icon {
 		width: 36px;
@@ -32,4 +34,8 @@ $mapElFont: bold 14px 'Lucida Console', Monaco, monospace;
 	tr {
     border: 1px solid #ccc;
 	}
+}
+
+.openspace-attr {
+	width: 45px;
 }

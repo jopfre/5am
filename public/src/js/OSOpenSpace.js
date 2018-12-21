@@ -49,6 +49,7 @@
       var container = L.DomUtil.create('div', 'os-logo-control');
       var logoImage = L.DomUtil.create('img', '', container);
       logoImage.title = 'Powered by OS OpenSpace';
+      logoImage.classList = 'openspace-attr';
       logoImage.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAA7CAMAAAD4p6zTAAAAdVBMVEUAAABDPYxDPY1AQI9EPY5EPoxEPY3///9EPY3z8/iWkr+KhrhzbqrEB1FnYaJbVZtQSZR+erGinsb00d7Fwtv78PTwwdTQz+PTRX3IF1zc2+ro5/Gtqs25ttTig6jaZJLtssn44OnLJmfpor7lk7PPNnLWVYfBOrQkAAAAB3RSTlMAUJ8Qv8+vnqzJJAAAAmNJREFUeAHl14Vi2zAUheHyuVds5nD6/o84211YcsHj/aVA85lBd0P3T/S1nu7vxh5fiIyIP58wRA+PA/FApsHXagw9DEtBhvHV2FC/LM/U4Os19Hx3RwZzMtQTAnMSAxFjTvE5QaRkg4lUARRqkgDLaC6BVHWOhBToeo9qS4adU4JIsCJrB8I5Em0EmM5HxMIJV7ORFhGlXWRaRDHVtWN2MkJNI9GwjYlrBx9RFE2sgFjZwrUy6kgpJQit6/+6DjDfFySOZStFYEFQWEbUCisb59imYKbxtVrKw1wwVFtY14QISGcN15TCSHSkXEdAZI1t+h83EtYaholwSxxqahzj4uy1gk9P2BYe4jOxFZhJ9P0vRN1K1RenjIvWu2WJbblIME1wa+mYbM6Ape7DbqP1ZjtFpJYuEoc5WVV6aLB6pcyChKDrTP0m6LcwttBVEiAk3eYGY11dEMir0k9I8uUYWOpLAknuJVLypwB9aHqjsqNAHZYfI2IKZbH+GGEpWIrXA5HkSZCoKZzE7kCUWleLzE/EFM4hPyN6ZOslJE3EOCf6tj5C0UTFNaFX84kqm03oxS0R0USM/TWx+ewWQVZeETq7IQoKF6Fvu78k8hsCjoJ1GFvnizAxvSSOceiMSD5zpMbwEbgl0JI/Ax/x6iFC29XVWCW3RO4l2JCnAiir/JoInDvBkf/sm1R6cUlUWYAAWkcXqQZD673ebLMTsUmmblGkOwMKHNpV/cwvF9lILLPpayqnQlkiFbUNzlst91onZVXu1n/mzcH8kcD88cj8UdGPGJvNHyH2PT7MHKfOHy1/Axgmj2KBwwXnAAAAAElFTkSuQmCC';
       return container;
     }
