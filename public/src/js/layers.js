@@ -1,17 +1,17 @@
 //Coordinates
-// L.GridLayer.DebugCoords = L.GridLayer.extend({
-//   createTile: function (coords) {
-//     var tile = document.createElement('div');
-//     tile.innerHTML = [coords.x, coords.y-1, coords.z].join(', ');
-//     return tile;
-//   }
-// });
+L.GridLayer.DebugCoords = L.GridLayer.extend({
+  createTile: function (coords) {
+    var tile = document.createElement('div');
+    tile.innerHTML = [coords.x, coords.y-1, coords.z].join(', ');
+    return tile;
+  }
+});
 
-// L.gridLayer.debugCoords = function(opts) {
-//   return new L.GridLayer.DebugCoords(opts);
-// };
+L.gridLayer.debugCoords = function(opts) {
+  return new L.GridLayer.DebugCoords(opts);
+};
 
-// map.addLayer( L.gridLayer.debugCoords({tileSize: 250}) );
+map.addLayer( L.gridLayer.debugCoords({tileSize: 250}) );
 
 //Lidar
 L.GridLayer.Lidar = L.GridLayer.extend({
@@ -20,14 +20,12 @@ L.GridLayer.Lidar = L.GridLayer.extend({
     var tileSize = this.getTileSize();
     tile.setAttribute('width', tileSize.x);
     tile.setAttribute('height', tileSize.y);
-
     var ctx = tile.getContext('2d');
     var lat = coords.x;
     var lon = Math.abs(coords.y) - 1; //adjust for top left v bottom left discrepancy between leaflet and os
 
     var url = "/lidar?lat="+lat+"&lon="+lon;
     var maxHeight = 120; //harcoded for now
-
     fetch(url)
     .then(function(res) {
       return res.json();
@@ -61,7 +59,9 @@ L.gridLayer.lidar = function(opts) {
   return new L.GridLayer.Lidar(opts);
 };
 
-map.addLayer(L.gridLayer.lidar());
+map.addLayer(L.gridLayer.lidar({
+   tileSize: 250,  
+}));
 
 
 //Sun position
