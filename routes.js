@@ -17,13 +17,13 @@ routes.route('/lidar')
       {projection: { data: 1 }},
     ).then(function(doc) {
       if(!doc) {
-        console.log(id+' not found.');
+        res.status(404).json({error: id+' not found'});
       } else {
         res.json(doc);
-        console.log(id+' found.')
       }
     }).catch(function(err){
       console.log(err);
+      // next(err);
     });
 
   });

@@ -1,5 +1,5 @@
 Features
-	fix error handling for non existent lidar tiles
+	calculate highest spots on map
 	investigate why tiles not loading when zoomed out
 	Research zone of theoretical visibility
 

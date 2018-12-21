@@ -1,17 +1,17 @@
 //Coordinates
-L.GridLayer.DebugCoords = L.GridLayer.extend({
-  createTile: function (coords) {
-    var tile = document.createElement('div');
-    tile.innerHTML = [coords.x, coords.y-1, coords.z].join(', ');
-    return tile;
-  }
-});
+// L.GridLayer.DebugCoords = L.GridLayer.extend({
+//   createTile: function (coords) {
+//     var tile = document.createElement('div');
+//     tile.innerHTML = [coords.x, coords.y-1, coords.z].join(', ');
+//     return tile;
+//   }
+// });
 
-L.gridLayer.debugCoords = function(opts) {
-  return new L.GridLayer.DebugCoords(opts);
-};
+// L.gridLayer.debugCoords = function(opts) {
+//   return new L.GridLayer.DebugCoords(opts);
+// };
 
-map.addLayer( L.gridLayer.debugCoords({tileSize: 250}) );
+// map.addLayer( L.gridLayer.debugCoords({tileSize: 250}) );
 
 //Lidar
 L.GridLayer.Lidar = L.GridLayer.extend({
@@ -27,12 +27,12 @@ L.GridLayer.Lidar = L.GridLayer.extend({
     var url = "/lidar?lat="+lat+"&lon="+lon;
     var maxHeight = 120; //harcoded for now
     fetch(url)
-    .then(function(res) {
-      return res.json();
-    })
-    .then(function(res) {
-
-      var data = res.data;
+    .then(parseJSON)
+    .then(function(response) {
+      if (!response.ok) {
+        throw Error(response.json.error);
+      } else {
+        var data = response.json.data;
         // consider using image data for performance https://stackoverflow.com/questions/7812514/drawing-a-dot-on-html5-canvas
         for(var y = 0; y < data.length; y++) {
           var row = data[y];
@@ -46,7 +46,8 @@ L.GridLayer.Lidar = L.GridLayer.extend({
           }
         }
         done(null, tile);
-      })
+      }
+    })
     .catch(function(error) {
       console.log(error);
     });
@@ -129,6 +130,26 @@ var SunPositionLayer = L.CanvasLayer.extend({
 
 var sunPositionLayer = new SunPositionLayer();
 sunPositionLayer.addTo(map);
+
+/**
+ * Parses the JSON returned by a network request
+ *
+ * @param  {object} response A response from a network request
+ *
+ * @return {object}          The parsed JSON, status from the response
+ */
+function parseJSON(response) {
+  return new Promise(function(resolve) {
+    response.json()
+    .then(function(json) { 
+      resolve({
+        status: response.status,
+        ok: response.ok,
+        json: json,
+      });
+    });
+  });
+}
 
 //https://jsfiddle.net/eokwL9mp/3/https://jsfiddle.net/eokwL9mp/3/
 function computeIntersection(a, b, c, d) {
