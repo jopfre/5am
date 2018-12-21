@@ -1,6 +1,7 @@
 Features
-	calculate highest spots on map
 	investigate why tiles not loading when zoomed out
+		probably because the coordinate system chages?
+	calculate highest spots on map
 	Research zone of theoretical visibility
 
 

@@ -1,17 +1,17 @@
-//Coordinates
-// L.GridLayer.DebugCoords = L.GridLayer.extend({
-//   createTile: function (coords) {
-//     var tile = document.createElement('div');
-//     tile.innerHTML = [coords.x, coords.y-1, coords.z].join(', ');
-//     return tile;
-//   }
-// });
+// Coordinates
+L.GridLayer.DebugCoords = L.GridLayer.extend({
+  createTile: function (coords) {
+    var tile = document.createElement('div');
+    tile.innerHTML = [coords.x, coords.y-1, coords.z].join(', ');
+    return tile;
+  }
+});
 
-// L.gridLayer.debugCoords = function(opts) {
-//   return new L.GridLayer.DebugCoords(opts);
-// };
+L.gridLayer.debugCoords = function(opts) {
+  return new L.GridLayer.DebugCoords(opts);
+};
 
-// map.addLayer( L.gridLayer.debugCoords({tileSize: 250}) );
+map.addLayer( L.gridLayer.debugCoords({tileSize: 250}) );
 
 //Lidar
 L.GridLayer.Lidar = L.GridLayer.extend({
@@ -73,17 +73,15 @@ var SunPositionLayer = L.CanvasLayer.extend({
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     var azis = getSunAzis(MAP_CENTER);
     var canvasCenter = this._map.latLngToContainerPoint(MAP_CENTER);
-
-    ctx.fillStyle = 'rgba(255, 60, 60, 0.2)';
-    ctx.strokeStyle = 'rgba(255, 60, 60, 0.9)';
     
-    r =  canvas.width;
+    var length =  canvas.width > canvas.height ? canvas.width : canvas.height   ;
 
-    var sunriseX = canvasCenter.x + r * Math.cos(Math.PI/2 + azis.sunrise);
-    var sunriseY = canvasCenter.y + r * Math.sin(Math.PI/2 + azis.sunrise);
-    var sunsetX = canvasCenter.x + r * Math.cos(Math.PI/2 + azis.sunset);
-    var sunsetY = canvasCenter.y + r * Math.sin(Math.PI/2 + azis.sunset);
+    var sunriseX = canvasCenter.x + length * Math.cos(Math.PI/2 + azis.sunrise);
+    var sunriseY = canvasCenter.y + length * Math.sin(Math.PI/2 + azis.sunrise);
+    var sunsetX = canvasCenter.x + length * Math.cos(Math.PI/2 + azis.sunset);
+    var sunsetY = canvasCenter.y + length * Math.sin(Math.PI/2 + azis.sunset);
    
+    ctx.strokeStyle = 'rgb(0, 70, 127)';
     //sunrise
     ctx.beginPath();
     ctx.moveTo(canvasCenter.x, canvasCenter.y);
