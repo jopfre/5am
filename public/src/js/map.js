@@ -12,7 +12,7 @@ var bristolLatLon = os2ll(358000,174000);
 // Init Leaflet.Map
 var map = new L.Map('map', {
   crs: L.OSOpenSpace.CRS, //OS coordinate system
-  attributionControl: true,
+  attributionControl: false,
   maxZoom: 3,
   minZoom: 0,
 });

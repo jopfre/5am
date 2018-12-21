@@ -1,5 +1,8 @@
 Features
 	add sun rise position
+		why is position different to sun calc?
+			try switching to default projection and checking again to see if projection is problem
+		place icons on edge of map
 	fix error handling for non existent lidar tiles
 	investigate why tiles not loading when zoomed out
 	Research zone of theoretical visibility
