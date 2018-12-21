@@ -4,7 +4,7 @@ function render() {
 	renderSunTimes(MAP_CENTER);
 }
 
-map.addEventListener('moveend ', function() {
+map.addEventListener('move ', function() {
 	render();
 });
 

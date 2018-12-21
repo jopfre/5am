@@ -120,17 +120,9 @@ var SunPositionLayer = L.CanvasLayer.extend({
       {x: sunsetX, y: sunsetY}
     );
 
-    var riseIcon = new Image();
-    riseIcon.onload = function() {
-      ctx.drawImage(riseIcon, sunriseEdgePosition.point.x - 31, sunriseEdgePosition.point.y - 35, 62, 35);
-    };
-    riseIcon.src = "../img/sunrise.svg";
+    ctx.drawImage(document.getElementById("sunrise-icon"), sunriseEdgePosition.point.x - 31, sunriseEdgePosition.point.y - 35, 62, 35);
 
-    var setIcon = new Image();
-    setIcon.onload = function() {
-      ctx.drawImage(setIcon, sunsetEdgePosition.point.x - 31, sunsetEdgePosition.point.y - 35, 62, 35);
-    };
-    setIcon.src = "../img/sunset.svg";
+    ctx.drawImage(document.getElementById("sunset-icon"), sunsetEdgePosition.point.x - 31, sunsetEdgePosition.point.y - 35, 62, 35);
 
   }
 });
