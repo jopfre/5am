@@ -23,6 +23,8 @@ var readFiles = function(dir, filelist) {
 };
 var files = readFiles('./assets/lidar/');
 
+console.log(files);
+
 // For testing single files
 // var single = [files[0]];
 // files = single;

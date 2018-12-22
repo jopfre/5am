@@ -1,7 +1,15 @@
 Features
-	investigate why tiles not loading when zoomed out
-		probably because the coordinate system chages?
+	tiles dont load when zoomed out be cause coordiantes are different
+		find relationship between to coordinate systems 
+			176 85
+			352 168
+
+		> convert coordinates to one resolution up
+
+	reduce how quickly tiles despawn
 	calculate highest spots on map
+	add unziping to insert
+	fix resolution of sun icons
 	Research zone of theoretical visibility
 
 

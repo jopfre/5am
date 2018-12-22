@@ -61,7 +61,8 @@ L.gridLayer.lidar = function(opts) {
 };
 
 map.addLayer(L.gridLayer.lidar({
-   tileSize: 250,  
+   tileSize: 250,
+   minNativeZoom: 2,
 }));
 
 

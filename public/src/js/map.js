@@ -13,7 +13,7 @@ var bristolLatLon = os2ll(358000,174000);
 var map = new L.Map('map', {
   crs: L.OSOpenSpace.CRS, //OS coordinate system
   attributionControl: false,
-  maxZoom: 3,
+  maxZoom: 4,
   minZoom: 0,
 });
 
